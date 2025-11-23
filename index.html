@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>堂吉诃德</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>堂吉诃德</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#">新对话</a></li>
+                    <li><a href="#">历史</a></li>
+                    <li><a href="#">设置</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>v1.0</p>
+            </div>
+        </aside>
+        <main class="chat-main">
+            <div class="chat-header">
+                <h2>你好! Don Quixote</h2>
+                <p>勇敢的旅行者, 欢迎来到堂吉诃德的对话大厅。</p>
+            </div>
+            <div class="chat-window">
+                <!-- 聊天消息将在这里动态插入 -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" placeholder="按下输入, / 选择快捷指令">
+                <button>发送</button>
+            </div>
+        </main>
+        <div class="settings-page" style="display: none;">
+            <h2>设置</h2>
+            <div class="setting-item">
+                <label for="api-url">API URL</label>
+                <input type="text" id="api-url" placeholder="请输入你的模型API URL">
+            </div>
+            <div class="setting-item">
+                <label for="api-key">API Key</label>
+                <input type="password" id="api-key" placeholder="请输入你的API Key">
+            </div>
+            <div class="setting-item">
+                <button id="save-settings">保存</button>
+                <p id="save-status"></p>
+            </div>
+        </div>
+        <aside class="right-panel">
+            <div class="notepad">
+                <h3>笔记本</h3>
+                <textarea placeholder="记录一些重要的信息..."></textarea>
+            </div>
+            <div class="user-examples">
+                <h3>用户示例</h3>
+                <ul>
+                    <li><button>我忘了交电费。</button></li>
+                    <li><button>早上好困, 不想起床。</button></li>
+                    <li><button>我的咖啡凉了。</button></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

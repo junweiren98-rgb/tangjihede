@@ -1,0 +1,209 @@
+/* 全局样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 侧边栏 */
+.sidebar {
+    width: 240px;
+    background-color: #161625;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.sidebar-nav li.active a {
+    background-color: #2a2a45;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    font-size: 14px;
+    color: #7a7a8c;
+}
+
+/* 主聊天区 */
+.chat-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+.chat-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chat-header h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.chat-header p {
+    background-color: #2a2a45;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.chat-input-area {
+    display: flex;
+    margin-top: 20px;
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    background-color: #2a2a45;
+    border: none;
+    color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.chat-input-area button {
+    background-color: #2a2a45;
+    border: none;
+    color: #e0e0e0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 右侧面板 */
+.right-panel {
+    width: 300px;
+    background-color: #161625;
+    padding: 20px;
+    border-left: 1px solid #2a2a45;
+}
+
+.notepad h3, .user-examples h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.notepad textarea {
+    width: 100%;
+    height: 200px;
+    background-color: #2a2a45;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    color: #e0e0e0;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.user-examples ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-examples button {
+    width: 100%;
+    background-color: #2a2a45;
+    border: none;
+    color: #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* 设置页面 */
+.settings-page {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.settings-page h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.setting-item {
+    margin-bottom: 25px;
+}
+
+.setting-item label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.setting-item input {
+    width: 100%;
+    max-width: 500px;
+    background-color: #2a2a45;
+    border: 1px solid #4a4a6a;
+    color: #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#save-settings {
+    background-color: #4a4a6a;
+    border: none;
+    color: #e0e0e0;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#save-status {
+    margin-top: 15px;
+    color: #32cd32; /* Green */
+}
+}
