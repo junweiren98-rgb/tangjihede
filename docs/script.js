@@ -94,8 +94,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 页面切换逻辑 ---
-    navLinks.forEach(link => {
+    // --- 保存设置逻辑 ---
+saveButton.addEventListener('click', () => {
+    const apiUrl = apiUrlInput.value.trim();
+    const apiKey = apiKeyInput.value.trim();
+
+    if (apiUrl && apiKey) {
+        localStorage.setItem('apiUrl', apiUrl);
+        localStorage.setItem('apiKey', apiKey);
+        saveStatus.textContent = '设置保存成功！';
+        saveStatus.style.color = '#4CAF50';
+    } else {
+        saveStatus.textContent = '请输入有效的API URL和API Key！';
+        saveStatus.style.color = '#f44336';
+    }
+
+    setTimeout(() => {
+        saveStatus.textContent = '';
+    }, 3000);
+});
+
+// --- 页面切换逻辑 ---
+navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault(); // 阻止链接默认跳转行为
             const targetPage = link.getAttribute('href');
