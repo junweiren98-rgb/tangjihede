@@ -21,6 +21,8 @@ body, html {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    position: relative; /* 添加此行 */
+    z-index: 10; /* 添加此行 */
 }
 
 .sidebar-header h1 {
@@ -63,6 +65,8 @@ body, html {
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
+    position: relative; /* 添加此行 */
+    z-index: 1; /* 添加此行，确保层级较低 */
 }
 
 .chat-header {
@@ -120,6 +124,8 @@ body, html {
     background-color: #161625;
     padding: 20px;
     border-left: 1px solid #2a2a45;
+    position: relative; /* 添加此行 */
+    z-index: 1; /* 添加此行，确保层级较低 */
 }
 
 .notepad h3, .user-examples h3 {
