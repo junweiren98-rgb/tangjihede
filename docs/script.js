@@ -94,6 +94,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- 页面切换逻辑 ---
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // 阻止链接默认跳转行为
+            const targetPage = link.getAttribute('href');
+
+            // 移除所有链接的激活状态
+            navLinks.forEach(l => l.parentElement.classList.remove('active'));
+            // 为当前点击的链接添加激活状态
+            link.parentElement.classList.add('active');
+
+            if (targetPage === '#settings') {
+                chatMain.style.display = 'none';
+                settingsPage.style.display = 'block';
+            } else {
+                chatMain.style.display = 'flex';
+                settingsPage.style.display = 'none';
+            }
+        });
+    });
+
     // --- 聊天消息样式 (动态添加) ---
     const style = document.createElement('style');
     style.textContent = `
