@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 真实API调用
         try {
-            const response = await fetch('http://localhost:3000/api/v3/chat/completions', {
+            const response = await fetch('https://tangjihede.vercel.app/api/v3/chat/completions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
